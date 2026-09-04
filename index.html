@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 🌍 全球多语言 SEO 标题与描述 -->
+    <title>Astral Forge: Desktop Alchemist - Akashic Cipher | Weekly Secret Code</title>
+    <meta name="description" content="Official weekly Akashic Cipher generator for Astral Forge: Desktop Alchemist. Automatically updated every Thursday (UTC). Redeem in-game for exclusive alchemy rewards! 阿卡夏密令 · 毎週の暗号 · 주간 암호 · Еженедельный шифр · Wöchentlicher Code.">
+    
+    <!-- 🔍 聚合 Steam 核心多国语言关键词 (中/英/日/韩/俄/德/法/西/葡等) -->
+    <meta name="keywords" content="Astral Forge, Desktop Alchemist, Akashic Cipher, Astral Forge Weekly Cipher, Astral Forge Codes, Redeem Code, 阿卡夏密令, 桌面炼金术士, 炼金密令, アーカーシャの暗号, 毎週の暗号, 데스크톱 연금술사, 아카샤 암호, 주간 코드, Акашический шифр, Еженедельный шифр, Akasha-Chiffre, Chiffre Akashique, Cifra Akáshica, Steam Game, Zhisu Studio">
+    
+    <style>
+        :root {
+            --bg-color: #0d0e12;
+            --card-bg: #16171f;
+            --accent: #f59e0b;
+            --accent-glow: rgba(245, 158, 11, 0.35);
+            --text-main: #f3f4f6;
+            --text-sub: #9ca3af;
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans", "Microsoft YaHei", sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 680px;
+            width: 100%;
+            text-align: center;
+        }
+        /* 语言切换栏 */
+        .lang-switch {
+            display: flex;
+            justify-content: flex-end;
+            margin-bottom: 20px;
+        }
+        .lang-select {
+            background: #1f2029;
+            color: #d1d5db;
+            border: 1px solid #374151;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 13px;
+            cursor: pointer;
+            outline: none;
+        }
+        .header h1 {
+            font-size: 26px;
+            color: #fff;
+            margin-bottom: 6px;
+            text-shadow: 0 0 20px var(--accent-glow);
+        }
+        .header p {
+            color: var(--text-sub);
+            font-size: 14px;
+            margin-bottom: 25px;
+        }
+        .cipher-card {
+            background: var(--card-bg);
+            border: 1px solid #2a2b38;
+            border-radius: 20px;
+            padding: 35px 25px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+            margin-bottom: 25px;
+        }
+        .card-label {
+            font-size: 13px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        .cipher-box {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 52px;
+            font-weight: 800;
+            letter-spacing: 12px;
+            color: #fff;
+            background: #090a0c;
+            padding: 18px 10px 18px 22px;
+            border-radius: 12px;
+            border: 1px dashed #3a3b4c;
+            margin-bottom: 20px;
+            user-select: all;
+        }
+        .btn-copy {
+            background: var(--accent);
+            color: #000;
+            border: none;
+            padding: 12px 28px;
+            font-size: 15px;
+            font-weight: 700;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .btn-copy:hover {
+            transform: scale(1.04);
+            box-shadow: 0 0 15px var(--accent-glow);
+        }
+        .countdown-box {
+            margin-top: 25px;
+            font-size: 13px;
+            color: var(--text-sub);
+            line-height: 1.6;
+        }
+        .countdown-time {
+            color: #f3f4f6;
+            font-weight: 700;
+            font-size: 14px;
+        }
+        /* 游戏互推 / 广告展位 */
+        .ad-banner {
+            background: #13141a;
+            border: 1px solid #23242e;
+            border-radius: 14px;
+            padding: 20px;
+            margin-top: 15px;
+        }
+        .ad-banner h3 { font-size: 15px; color: #fff; margin-bottom: 6px; }
+        .ad-banner p { font-size: 13px; color: var(--text-sub); margin-bottom: 12px; }
+        .steam-link {
+            display: inline-block;
+            background: #2563eb;
+            color: #fff;
+            text-decoration: none;
+            padding: 9px 20px;
+            font-size: 13px;
+            font-weight: 600;
+            border-radius: 6px;
+        }
+        .steam-link:hover { background: #1d4ed8; }
+        .footer {
+            margin-top: 35px;
+            font-size: 12px;
+            color: #4b5563;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <!-- 语言切换下拉框 -->
+    <div class="lang-switch">
+        <select id="lang-select" class="lang-select" onchange="changeLanguage(this.value)">
+            <option value="en">🌐 English</option>
+            <option value="zh">🇨🇳 简体中文</option>
+            <option value="zh-TW">🇭🇰 繁體中文</option>
+            <option value="ja">🇯🇵 日本語</option>
+            <option value="ko">🇰🇷 한국어</option>
+            <option value="ru">🇷🇺 Русский</option>
+            <option value="de">🇩🇪 Deutsch</option>
+            <option value="es">🇪🇸 Español</option>
+            <option value="fr">🇫🇷 Français</option>
+        </select>
+    </div>
+
+    <div class="header">
+        <h1 id="ui-title">🔮 Astral Forge: Akashic Cipher</h1>
+        <p id="ui-subtitle">Official Weekly Reward Key · Free In-Game Drops</p>
+    </div>
+
+    <div class="cipher-card">
+        <div class="card-label" id="ui-card-label">✨ THIS WEEK'S AKASHIC CIPHER ✨</div>
+        <div class="cipher-box" id="cipher-code">------</div>
+        <button class="btn-copy" id="btn-copy" onclick="copyCipher()">📋 Copy Cipher</button>
+        
+        <div class="countdown-box">
+            <span id="ui-rotation-text">Next Rotation (Every Thursday 00:00 UTC):</span><br>
+            <span class="countdown-time" id="countdown-timer">Calculating...</span>
+        </div>
+    </div>
+
+    <!-- 游戏互推 / 广告展位 -->
+    <div class="ad-banner">
+        <h3 id="ui-ad-title">🎮 More from Zhisu Studio</h3>
+        <p id="ui-ad-desc">Explore our peaceful desktop ecosystem <strong>Desktop Oasis</strong> on Steam!</p>
+        <a href="https://store.steampowered.com/app/4688280" target="_blank" class="steam-link" id="ui-ad-btn">Wishlist Desktop Oasis ➔</a>
+    </div>
+
+    <div class="footer">
+        © Zhisu Studio · Astral Forge: Desktop Alchemist
+    </div>
+</div>
+
+<script>
+    // 语言翻译字典库
+    const i18n = {
+        en: {
+            title: "🔮 Astral Forge: Akashic Cipher",
+            subtitle: "Official Weekly Reward Key · Free In-Game Drops",
+            cardLabel: "✨ THIS WEEK'S AKASHIC CIPHER ✨",
+            copyBtn: "📋 Copy Cipher",
+            copied: "✅ Copied to Clipboard!",
+            rotation: "Next Rotation (Every Thursday 00:00 UTC):",
+            adTitle: "🎮 More from Zhisu Studio",
+            adDesc: "Explore our peaceful desktop ecosystem Desktop Oasis on Steam!",
+            adBtn: "Wishlist Desktop Oasis ➔"
+        },
+        zh: {
+            title: "🔮 Astral Forge · 阿卡夏密令",
+            subtitle: "官方每周神秘密令 · 免费领取游戏内炼金奖励",
+            cardLabel: "✨ 本周工坊阿卡夏密令 ✨",
+            copyBtn: "📋 复制密令",
+            copied: "✅ 已复制到剪贴板！",
+            rotation: "下次轮换倒计时（每周四 00:00 UTC / 08:00 北京时间）：",
+            adTitle: "🎮 发现更多好玩游戏",
+            adDesc: "体验我们专为摸鱼打造的桌面治愈水世界《Desktop Oasis（桌面绿洲）》！",
+            adBtn: "在 Steam 添加愿望单 ➔"
+        },
+        "zh-TW": {
+            title: "🔮 Astral Forge · 阿卡夏密令",
+            subtitle: "官方每週神祕密令 · 免費領取遊戲內煉金獎勵",
+            cardLabel: "✨ 本週工坊阿卡夏密令 ✨",
+            copyBtn: "📋 複製密令",
+            copied: "✅ 已複製到剪貼簿！",
+            rotation: "下次輪換倒數（每週四 00:00 UTC 刷新）：",
+            adTitle: "🎮 發現更多工作室作品",
+            adDesc: "體驗治癒系桌面水景遊戲《Desktop Oasis》！",
+            adBtn: "在 Steam 加入願望清單 ➔"
+        },
+        ja: {
+            title: "🔮 Astral Forge: アーカーシャの暗号",
+            subtitle: "公式ウィークリー秘密コード · ゲーム内無料報酬",
+            cardLabel: "✨ 今週のアーカーシャ暗号 ✨",
+            copyBtn: "📋 コードをコピー",
+            copied: "✅ クリップボードにコピーしました！",
+            rotation: "次回の更新まで (毎週木曜日 00:00 UTC):",
+            adTitle: "🎮 Zhisu Studio の他作品",
+            adDesc: "癒やしのデスクトップゲーム『Desktop Oasis』をチェック！",
+            adBtn: "Steam ウィッシュリストに追加 ➔"
+        },
+        ko: {
+            title: "🔮 Astral Forge: 아카샤 암호",
+            subtitle: "공식 주간 보상 코드 · 게임 내 무료 아이템 지급",
+            cardLabel: "✨ 이번 주의 아카샤 암호 ✨",
+            copyBtn: "📋 암호 복사",
+            copied: "✅ 클립보드에 복사되었습니다!",
+            rotation: "다음 변경까지 (매주 목요일 00:00 UTC):",
+            adTitle: "🎮 제작사의 다른 게임",
+            adDesc: "힐링 데스크톱 게임 'Desktop Oasis'를 만나보세요!",
+            adBtn: "Steam 찜하기 ➔"
+        },
+        ru: {
+            title: "🔮 Astral Forge: Акашический шифр",
+            subtitle: "Официальный еженедельный код · Внутриигровые награды",
+            cardLabel: "✨ ШИФР ЭТОЙ НЕДЕЛИ ✨",
+            copyBtn: "📋 Скопировать шифр",
+            copied: "✅ Скопировано в буфер!",
+            rotation: "Следующее обновление (Каждый четверг 00:00 UTC):",
+            adTitle: "🎮 Другие игры студии",
+            adDesc: "Откройте для себя Desktop Oasis в Steam!",
+            adBtn: "Добавить в список желаемого ➔"
+        },
+        de: {
+            title: "🔮 Astral Forge: Akasha-Chiffre",
+            subtitle: "Offizieller wöchentlicher Code · Kostenlose Belohnungen",
+            cardLabel: "✨ AKASHA-CHIFFRE DIESER WOCHE ✨",
+            copyBtn: "📋 Chiffre kopieren",
+            copied: "✅ In die Zwischenablage kopiert!",
+            rotation: "Nächste Rotation (Jeden Donnerstag 00:00 UTC):",
+            adTitle: "🎮 Mehr von Zhisu Studio",
+            adDesc: "Entdecke unser Desktop-Spiel Desktop Oasis auf Steam!",
+            adBtn: "Auf die Steam-Wunschliste ➔"
+        },
+        es: {
+            title: "🔮 Astral Forge: Cifra Akáshica",
+            subtitle: "Código secreto semanal oficial · Recompensas gratuitas",
+            cardLabel: "✨ CIFRA AKÁSHICA DE ESTA SEMANA ✨",
+            copyBtn: "📋 Copiar cifra",
+            copied: "✅ ¡Copiado al portapapeles!",
+            rotation: "Próxima rotación (Cada jueves 00:00 UTC):",
+            adTitle: "🎮 Más de Zhisu Studio",
+            adDesc: "¡Descubre nuestro juego de escritorio Desktop Oasis en Steam!",
+            adBtn: "Añadir a la lista de deseados ➔"
+        },
+        fr: {
+            title: "🔮 Astral Forge: Chiffre Akashique",
+            subtitle: "Code secret hebdomadaire officiel · Récompenses en jeu",
+            cardLabel: "✨ CHIFFRE AKASHIQUE DE LA SEMAINE ✨",
+            copyBtn: "📋 Copier le chiffre",
+            copied: "✅ Copié dans le presse-papiers !",
+            rotation: "Prochaine rotation (Chaque jeudi 00:00 UTC) :",
+            adTitle: "🎮 Plus de jeux du studio",
+            adDesc: "Découvrez notre jeu relaxant Desktop Oasis sur Steam !",
+            adBtn: "Ajouter à la liste de souhaits ➔"
+        }
+    };
+
+    let currentLang = 'en';
+
+    function setLanguage(lang) {
+        if (!i18n[lang]) lang = 'en';
+        currentLang = lang;
+        const t = i18n[lang];
+        document.getElementById('ui-title').innerText = t.title;
+        document.getElementById('ui-subtitle').innerText = t.subtitle;
+        document.getElementById('ui-card-label').innerText = t.cardLabel;
+        document.getElementById('btn-copy').innerText = t.copyBtn;
+        document.getElementById('ui-rotation-text').innerText = t.rotation;
+        document.getElementById('ui-ad-title').innerText = t.adTitle;
+        document.getElementById('ui-ad-desc').innerText = t.adDesc;
+        document.getElementById('ui-ad-btn').innerText = t.adBtn;
+        document.getElementById('lang-select').value = lang;
+    }
+
+    function changeLanguage(lang) {
+        setLanguage(lang);
+    }
+
+    // 智能自动检测用户浏览器语言
+    function autoDetectLanguage() {
+        const userLang = (navigator.language || navigator.userLanguage || 'en').toLowerCase();
+        if (userLang.includes('zh-tw') || userLang.includes('zh-hk')) setLanguage('zh-TW');
+        else if (userLang.includes('zh')) setLanguage('zh');
+        else if (userLang.includes('ja')) setLanguage('ja');
+        else if (userLang.includes('ko')) setLanguage('ko');
+        else if (userLang.includes('ru')) setLanguage('ru');
+        else if (userLang.includes('de')) setLanguage('de');
+        else if (userLang.includes('es')) setLanguage('es');
+        else if (userLang.includes('fr')) setLanguage('fr');
+        else setLanguage('en');
+    }
+
+    // 核心算法（与虚幻引擎 100% 一致）
+    function calculateWeeklyCipher() {
+        const nowSeconds = Math.floor(Date.now() / 1000);
+        const w = Math.floor(nowSeconds / 604800);
+        const code = ((w * 849273 + 482910) % 900000) + 100000;
+        return code;
+    }
+
+    const currentCode = calculateWeeklyCipher();
+    document.getElementById('cipher-code').innerText = currentCode;
+
+    function copyCipher() {
+        navigator.clipboard.writeText(currentCode.toString()).then(() => {
+            const btn = document.getElementById('btn-copy');
+            btn.innerText = i18n[currentLang].copied;
+            btn.style.background = '#10b981';
+            setTimeout(() => {
+                btn.innerText = i18n[currentLang].copyBtn;
+                btn.style.background = 'var(--accent)';
+            }, 2000);
+        });
+    }
+
+    function updateCountdown() {
+        const now = Math.floor(Date.now() / 1000);
+        const currentWeekIndex = Math.floor(now / 604800);
+        const nextRotationSeconds = (currentWeekIndex + 1) * 604800;
+        let diff = nextRotationSeconds - now;
+
+        const days = Math.floor(diff / 86400);
+        diff %= 86400;
+        const hours = Math.floor(diff / 3600);
+        diff %= 3600;
+        const mins = Math.floor(diff / 60);
+        const secs = diff % 60;
+
+        document.getElementById('countdown-timer').innerText = 
+            `${days}d ${hours}h ${mins}m ${secs}s`;
+    }
+
+    autoDetectLanguage();
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+</script>
+
+</body>
+</html>
